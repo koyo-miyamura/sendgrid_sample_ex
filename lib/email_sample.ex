@@ -1,18 +1,12 @@
 defmodule EmailSample do
-  @moduledoc """
-  Documentation for `EmailSample`.
-  """
+  import Swoosh.Email
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> EmailSample.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  # Change xxxxx into yours
+  def email do
+    new()
+    |> to("xxxxx@gmail.com")
+    |> from({"Koyo", "xxxxx@gmail.com"})
+    |> subject("Test email")
+    |> text_body("Hello from Koyo\n")
   end
 end

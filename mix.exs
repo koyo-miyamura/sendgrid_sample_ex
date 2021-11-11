@@ -21,7 +21,8 @@ defmodule EmailSample.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:swoosh, "~> 1.5"}
+      {:swoosh, "~> 1.5"},
+      {:hackney, "~> 1.9"}
     ]
   end
 end
